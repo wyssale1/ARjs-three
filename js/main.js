@@ -42,6 +42,10 @@ arToolkitSource.init(function onReady() {
 })
 
 // handle resize
+window.addEventListener("load", function () {
+    onResize()
+})
+
 window.addEventListener('resize', function () {
     onResize()
 })
@@ -87,8 +91,8 @@ onRenderFcts.push(function () {
 // init controls for camera
 var markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
     type: 'pattern',
-    patternUrl: THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
-    // patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.kanji',
+    //patternUrl: '../arjs-three/data/cybersecurity.patt',
+     patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.kanji',
     // as we controls the camera, set changeMatrixMode: 'cameraTransformMatrix'
     changeMatrixMode: 'cameraTransformMatrix'
 })
